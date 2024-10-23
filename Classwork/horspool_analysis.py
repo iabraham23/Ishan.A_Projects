@@ -1,3 +1,9 @@
+#implementation of Hoorspool's string matcher
+
+#graphs the time the algorithm takes as our input text and pattern increase in size
+#each test (for each length of text; 10,100,1000 characters) is run 50 times then the average is plotted
+
+
 import random
 import string
 from random import randint
