@@ -1,3 +1,4 @@
+#Bloom filter 
 
 class BloomFilter:
     def __init__(self):
@@ -27,10 +28,3 @@ class BloomFilter:
     #counts the number of 1s present in the binary string
 
 
-
-#OPTIONAL
-#list of good: https://dataforseo.com/free-seo-stats/top-1000-websites
-#can download a csv with the top1000 most frequented websites in the us
-
-#list of bad: https://github.com/stamparm/blackbook
-#can download a raw TXT of known malware domains, the list should be updating
