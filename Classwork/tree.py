@@ -1,3 +1,6 @@
+#Implementations of different traversals of a binary tree 
+#Level order, inorder, preorder, postorder
+
 from collections import deque
 
 
@@ -36,7 +39,7 @@ def level_order(t):
 def preorder(t):
     result = []
 
-    def f(n):
+    def f(n): #recursive helper function 
         if n:
             result.append(n.key)
             f(n.left)
