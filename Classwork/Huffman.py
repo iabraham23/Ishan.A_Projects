@@ -7,7 +7,7 @@ from heapq import heapify, heappush, heappop
 
  CALL decode_huffman('code', codebook) to decode
  
-encoding doesn't work properly just yet, the way I add 1s and 0s is off 
+encoding doesn't work completely, fix something in function two_lowest when adding 1s and 0s 
 
 """
 
