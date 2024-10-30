@@ -1,40 +1,32 @@
 """
 RULES
 
-* a dot lasts for one second
-* a dash last for three seconds
+* a dot lasts for one unit
+* a dash last for three units
 
-* the space between dots and dashes that are part of the same letter is one second
-* the space between different letters is three seconds
-* the space between different words is seven seconds
+* the space between dots and dashes that are part of the same letter is one unit
+* the space between different letters is three units
+* the space between different words is seven units
 
-NOTE: doesn't need to be a second, any unit
+
+text_to_morse: displays the morse code with correct timings between letters and words 
+no_spacing: displays raw morse code with no spacing, used for displaying on webpage  
 """
 
-def morse_dict(): #1 is dot 3 is dash
+def morse_dict():
+    
     #codebook = {chr(x): [] for x in range(ord('A'), ord('Z')+1)}
     #return codebook
+    
     codebook = {'A': ['*', '-'], 'B': ['-', '*', '*', '*'], 'C': ['-', '*', '-', '*'],
                 'D': ['-', '*', '*'], 'E': ['*'], 'F': ['*', '*', '-', '*'], 'G': ['-', '-', '*'],
-                'H': ['*', '*', '*', '*'], 'I': ['*', '*'], 'J': ['*', '-', '-', '-'], 'K': ['-', '*', '-'],
-                'L': ['*', '-', '*', '*'], 'M': ['-', '-'], 'N': ['-', '*'], 'O': ['-', '-', '-'], 'P': ['*', '-', '-', '*'],
-                'Q': ['-', '-', '*', '-'], 'R': ['*', '-', '*'], 'S': ['*', '*', '*'], 'T': ['-'], 'U': ['*', '*', '-'],
+                'H': ['*', '*', '*', '*'], 'I': ['*', '*'], 'J': ['*', '-', '-', '-'], 
+                'K': ['-', '*', '-'],'L': ['*', '-', '*', '*'], 'M': ['-', '-'], 'N': ['-', '*'], 
+                'O': ['-', '-', '-'], 'P': ['*', '-', '-', '*'],'Q': ['-', '-', '*', '-'], 
+                'R': ['*', '-', '*'], 'S': ['*', '*', '*'], 'T': ['-'], 'U': ['*', '*', '-'],
                 'V': ['*', '*', '*', '-'], 'W': ['*', '-', '-'], 'X': ['-', '*', '*', '-'],
                 'Y': ['-', '*', '-', '-'], 'Z': ['-', '-', '*', '*']}
     return codebook
-
-
-def dash_dot():
-    book = morse_dict()
-    for key,vals in book.items():
-        c = 0
-        while c < len(vals):
-            if vals[c] == 1:
-                vals[c] = '*'
-            else:
-                vals[c] = '-'
-            c+=1
-    return book
 
 
 
