@@ -3,6 +3,8 @@ from heapq import heapify, heappush, heappop
 
 """
 
+Huffman algorithm implementation using a min heap
+
  CALL create_code('any-string-to-codify') to create a codebook and code
 
  CALL decode_huffman('code', codebook) to decode
