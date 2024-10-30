@@ -7,7 +7,8 @@ from heapq import heapify, heappush, heappop
 
  CALL decode_huffman('code', codebook) to decode
  
-encoding doesn't work completely, fix something in function two_lowest when adding 1s and 0s 
+Small problem: The way I've written the code if you try to run different strings multiple times it
+might not work because node_array and bin_dict are outside of the functions
 
 """
 
@@ -77,6 +78,8 @@ also adds a new node that combines the characters and sums the frequencies
 - the first node I pop, x, should add a 0 to each character in the node 
 - the second node I pop, y, should add a 1 to each character in the node
 
+NOTE: HAVE TO REVERSE THE BITS AT THE END (done in create_code) 
+
 """
 
 bin_dict = {} #the codebook
@@ -85,31 +88,49 @@ def two_lowest(min_heap):
         return f'Cant pop two lowest'
 
     x = heappop(min_heap)
+    y = heappop(min_heap)
+
     for i in x.char:
         #print(i)
-        if i in bin_dict:
+        if len(y.char) >1:
+            if i in bin_dict:
+                bin_dict[i] += '1'
+            else:
+                bin_dict[i] = '1'
+
+        elif i in bin_dict:
             bin_dict[i] += '0'
         else:
             bin_dict[i] = '0'
 
-    y = heappop(min_heap)
     for v in y.char:
         #print(v)
-        if v in bin_dict:
+        if len(y.char) >1:
+            if v in bin_dict:
+                bin_dict[v] += '0'
+            else:
+                bin_dict[v] = '0'
+
+        elif v in bin_dict:
             bin_dict[v] += '1'
         else:
             bin_dict[v] = '1'
 
     heappush(min_heap, Node((x.char + y.char), (x.freq + y.freq)))
-    #return f'first popped: {x}, second popped: {y}, bin_dict: {bin_dict}'
+    return f'first popped: {x}, second popped: {y}, bin_dict: {bin_dict}'
 
 def create_code(string):
     x = create_frequency(string)
     i=0
 
-    while i < len(node_array) -1 :
+    while i < len(node_array)-1:
         two_lowest(x)
         i+=1
+
+    for key,vals in bin_dict.items(): #reversing the bits in bit_array
+        x = vals[::-1]
+        bin_dict[key] = x
+
     code = ''
     for j in string:
         code += bin_dict[j]
