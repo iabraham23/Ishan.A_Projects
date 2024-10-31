@@ -1,4 +1,6 @@
 """
+Text to Morse Code, to be displayed in a webpage
+
 RULES
 
 * a dot lasts for one unit
