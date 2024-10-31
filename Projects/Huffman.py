@@ -2,6 +2,7 @@ from heapq import heapify, heappush, heappop
 
 
 """
+Compression using the Huffman Algorithm! 
 
  CALL create_code('any-string-to-codify') to create a codebook and code
 
