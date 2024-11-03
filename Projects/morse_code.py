@@ -1,6 +1,4 @@
 """
-Text to Morse Code, to be displayed in a webpage
-
 RULES
 
 * a dot lasts for one unit
@@ -10,8 +8,10 @@ RULES
 * the space between different letters is three units
 * the space between different words is seven units
 
-text_to_morse: translates text to morse code with correct spacing
+text_to_morse: translates text to morse code with correct timings
 no_spacing(text_to_morse): gives morse code without spacing, used for display on webpage
+
+morse_to_text: takes in morse code (from this program) and turns it into text! 
 """
 
 def morse_dict():
@@ -76,4 +76,49 @@ def no_spacing(morse):
         if not val.isdigit():
             result+=val
     return result
+
+def invert_dict():
+    codebook = morse_dict()
+    for k, v in codebook.items():
+        new_v = ''
+        for val in v:
+            new_v += val
+        codebook[k] = new_v
+        new_v = ''
+    invert = {v: k for k, v in codebook.items()}
+    return invert
+
+
+def morse_to_text(morse):
+    invert = invert_dict()
+    result = ''
+    letter = ''
+
+    c = 0
+    while c < len(morse)-1:
+
+        if morse[c+1] == '1': #bit in letter so just add to letter and move forward
+
+            letter+= morse[c]
+            c+=2
+
+        elif morse[c+1] == '3': #if letter is complete
+
+            letter += morse[c]
+            result += invert[letter]
+            letter = ''
+
+            c+=2
+        else: #if word is complete, c+1 is 7, same as letter just with a space
+
+            letter += morse[c]
+            result += invert[letter] + ' '
+            letter = ''
+            c+=2
+
+    if len(morse) % 2 == 1: #if morse code is odd need to add the final bit to the incomplete letter
+        result += invert[letter + morse[-1]]
+
+    return result
+    
 
