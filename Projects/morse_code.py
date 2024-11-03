@@ -2,7 +2,7 @@
 RULES
 
 * a dot lasts for one unit
-* a dash last for three unit
+* a dash last for three units
 
 * the space between dots and dashes that are part of the same letter is one unit
 * the space between different letters is three units
