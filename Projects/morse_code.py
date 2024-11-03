@@ -84,7 +84,7 @@ def invert_dict():
         for val in v:
             new_v += val
         codebook[k] = new_v
-        new_v = ''
+        
     invert = {v: k for k, v in codebook.items()}
     return invert
 
