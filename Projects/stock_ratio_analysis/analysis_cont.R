@@ -1,3 +1,6 @@
+#needed files: Exercise_9_stock_data_performance_fundamentals
+
+
 library(tidyverse)
 install.packages("gt")
 library(gt)
