@@ -1,5 +1,5 @@
 # A comparison of popular stock performance ratios to gross profit margin and overall stock success
-
+# real data of US businesses from simfin, 3 files needed to view: us-balance-annual.csv, us-cashflow-annual.csv, us-income-annual.csv 
 
 
 install.packages("tidyverse")
