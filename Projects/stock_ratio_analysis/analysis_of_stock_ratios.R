@@ -1,3 +1,7 @@
+# A comparison of popular stock performance ratios to gross profit margin and overall stock success
+
+
+
 install.packages("tidyverse")
 library(tidyverse)
 
