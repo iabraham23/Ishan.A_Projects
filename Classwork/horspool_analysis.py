@@ -64,14 +64,19 @@ class HorspoolStringMatcher():
         if character in self.shift_table:
             return self.shift_table[character]
         return len(self.pattern)
+
+
+
 def generate_random_text(n):
     text = ''.join(random.choices(string.ascii_lowercase,k=n))
     return str(text)
+    
 def pattern_from_text(text):
     start = randint(0, len(text)//2)
     end = randint(len(text)//2 +1, len(text))
     #print(f" start: {start}, end: {end}")
     return text[start:end]
+    
 def random_match(n):
     text = generate_random_text(n)
     pat = pattern_from_text(text)
