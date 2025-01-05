@@ -1,3 +1,13 @@
+'''
+Mancala GUI using Tkinter
+Game performs a variation of Mancala I used to play:  
+if you end in a non-zero pit you pick up and keep going unless you finish in your goal (go again) or in a pit with nothing (end turn)
+
+Taught myself basics of tkinter for this, hence the simplistic board design  
+
+'''
+
+
 import tkinter
 from tkinter import *
 
