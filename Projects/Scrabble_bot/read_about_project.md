@@ -1,4 +1,4 @@
-Developed a scrabble bot as part of a team which works in the enviornment provided by our professor. 
+Developed a scrabble bot as part of a team which works in the dedicated enviornment provided by our professor. 
 
 
 --The file scrabble_ai is where our bot lives (this is the only piece of code we developed directly)-- 
