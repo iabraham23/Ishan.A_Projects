@@ -8,7 +8,6 @@ Taught myself basics of tkinter for this, hence the simplistic board design
 '''
 
 
-import tkinter
 from tkinter import *
 
 
@@ -81,7 +80,7 @@ def draw_board(board):
             count_for_button +=1
             update_display_amounts(board)
             text = 'This variation of Mancala makes you continue you turn if you\n end on a non-zero or non-goal pit'
-            how_lab = Label(root, textvariable=tkinter.StringVar(root, text))
+            how_lab = Label(root, textvariable=StringVar(root, text))
             how_lab.place(x=20,y=200)
 
 
@@ -90,7 +89,7 @@ def draw_board(board):
 
 def update_current_player_display(board):
     current_p = f'current player turn: {board.current_player}'
-    var = tkinter.StringVar(root, current_p)
+    var = StringVar(root, current_p)
     lab2 = Label(root, textvariable=var)
     lab2.place(x=100, y=150)
 
@@ -102,18 +101,18 @@ def update_display_amounts(board):
         for c in range(8):
             if (r == 0 and c == 0) or (r == 0 and c == 7):
                 a = board.amount[letters[count_for_letters]]
-                text_var = tkinter.StringVar()
+                text_var = StringVar()
                 text_var.set(a)
-                label = tkinter.Label(root, textvariable=text_var)
+                label = Label(root, textvariable=text_var)
                 label.place(x=c *SQUARE_WIDTH + (SQUARE_WIDTH - 1) -16, y=r * SQUARE_WIDTH + 2 * (SQUARE_WIDTH - 0.5)+5)
                 count_for_letters += 1
                 continue
             elif (r == 1 and c == 0) or (r == 1 and c == 7):
                 continue
             a = board.amount[letters[count_for_letters]]
-            text_var = tkinter.StringVar()
+            text_var = StringVar()
             text_var.set(a)
-            label = tkinter.Label(root, textvariable=text_var)
+            label = Label(root, textvariable=text_var)
             label.place(x=c * SQUARE_WIDTH + (SQUARE_WIDTH - 1) -18, y=r * SQUARE_WIDTH + 2*(SQUARE_WIDTH - 1)-5)
             count_for_letters += 1
 
