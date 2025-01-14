@@ -1,4 +1,4 @@
-Developed a scrabble bot as part of a team which works in the dedicated enviornment provided by our professor. 
+# Developed a scrabble bot as part of a team which works in the dedicated enviornment provided by our professor. 
 
 
 --The file scrabble_ai is where our bot lives (this is the only piece of code we developed directly)-- 
@@ -13,6 +13,6 @@ Developed a scrabble bot as part of a team which works in the dedicated enviornm
 
 
 * scrabble_gui.py: Where we can actually play against a bot or put two bots against each other, has a visual display 
-* scrabble_ai.py: Our scrabble bot (NigelRichards), the place we developed all the code for. Works by scanning the board to see what tiles are available and uses seperate functions to test letters given in our hand alongside letters on the board to find the best scoring possibility. Has some foresights as we had limited time to implement this; doesn't play words across multiple letters or find words attached to the sides of letters, doesn't utilize any advanced predictive capabilities in scrabble such as blocking. Still a strong bot which only an expierenced scrabbler could beat.   
+* scrabble_ai.py: Our scrabble bot (called NigelRichards, admittidly would probably be bested by the real Nigel Richards). Works by scanning the board to see what tiles are available and uses seperate functions to test letters given in our hand alongside letters on the board to find the best scoring possibility. Has some foresights as we had limited time to implement this; doesn't play words across multiple letters or find words attached to the sides of letters, doesn't utilize any advanced predictive capabilities in scrabble such as blocking. Still a strong bot which only an expierenced scrabbler could beat.   
 
 
