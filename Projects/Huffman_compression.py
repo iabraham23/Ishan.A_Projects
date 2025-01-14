@@ -2,6 +2,7 @@ from heapq import heapify, heappush, heappop
 
 
 """
+Implmentation of Huffman Compression, an example of lossless compression
 
  CALL F.create_code('any-string-to-codify') to create a codebook and code
 
