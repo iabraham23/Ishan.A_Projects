@@ -1,3 +1,8 @@
+"""
+Quickly made simplistic guessing game where you try and guess the order of the numbers 1-5
+Basic concept of Wordle or other guessing games 
+"""
+
 from random import shuffle
 
 class guessing_game:
