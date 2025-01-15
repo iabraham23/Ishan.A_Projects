@@ -25,22 +25,6 @@ class Boards:
 def Close():
     quit()
 
-def create_circle(x, y, r, canvas): # xy are center coordinates, r is radius
-    # taken from stack overflow
-    x0 = x - r
-    y0 = y - r
-    x1 = x + r
-    y1 = y + r
-    return canvas.create_oval(x0, y0, x1, y1)
-
-def four_circles(x, y, r, canvas): #coords where the 4 circles are centered around
-    d = 1.5 * r # less than diameter, just visual
-    c1 = create_circle(x, y+d, r, canvas)
-    c2 = create_circle(x + d, y, r, canvas)
-    c3 = create_circle(x, y - d, r, canvas)
-    c4 = create_circle(x-d, y, r, canvas)
-    return c1, c2, c3, c4
-
 def draw_board(board):
     no_goal_letters = 'MLKJIHABCDEF'
     count_for_button = 0
