@@ -3,5 +3,5 @@
 
 Repository of personal projects and class work!
 
-linkdin: https://www.linkedin.com/in/ishan-abraham-890b44200/ 
+linkdin: https://www.linkedin.com/in/ishan-abraham/
 
