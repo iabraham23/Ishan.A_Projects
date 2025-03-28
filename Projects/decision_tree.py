@@ -1,8 +1,6 @@
 
 """
-NOTE: In order for the final test case to pass have to have at least max depth of 4 which makes sense
-      I have a default for max depth as float('inf') so it should work right away but anything less
-      than 4 the tree won't get everything right
+Pure python decision Tree (and string representation) with max depth, tested using custom datum objects
 """
 
 
@@ -35,7 +33,6 @@ def impurity(data):
     :param data: A sequence of Datum objects.
     :return: The Gini impurity of the data, as per equation 6.1 on p. 197 of Géron.
     """
-    # TODO You have to write this
     samples = len(data)
     if samples == 0:
         return 1 #return worst possible value, needed for best_split
@@ -54,8 +51,6 @@ def split_cost(data, attribute, value):
     :param value: The value to distinguish from other values at this node.
     :return: The cost of splitting in this way, as per equation 6.2 on p. 200 of Géron.
     """
-    # TODO You have to write this
-
     samples = len(data)
     if samples == 0:
         return float('inf') #return worst possible value, needed for best_split
@@ -77,18 +72,6 @@ def best_split(data):
     :param data: A sequence of Datum objects.
     :return: The best attribute and value to split on at this node.
     """
-    # TODO You have to write this
-    # static_map = {'Alternative':[True, False],
-    #        'Bar':[True, False],
-    #        'Friday/Saturday':[True, False],
-    #        'Hungry':[True, False],
-    #        'Patrons':['Some', 'Full', 'None'],
-    #        'Price': ['$', '$$', '$$$'],
-    #         'Raining': [True, False],
-    #         'Reservation': [True, False],
-    #         'Type': ['French', 'Thai', 'Burger', 'Italian'],
-    #         'Wait': ['0-10', '10-30', '30-60', '>60']}
-    #realistically this wouldn't be ideal because if any new data is added you have to update this
 
     living_map = {}
     for datum in data:
@@ -124,7 +107,7 @@ def best_split(data):
 
 class Tree:
     def __init__(self, data, max_depth = float('inf')): #default to no max depth
-        if impurity(data) ==0 or max_depth==0:
+        if impurity(data) == 0 or max_depth == 0:
             self.prediction = data[0].target
             self.left = None
             self.right = None
