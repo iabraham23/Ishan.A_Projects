@@ -1,4 +1,3 @@
-# Team members who contributed to this project: Ishan and Braydon
 
 INITIAL_STATE = ('........',) * 3 + ('...XO...', '...OX...') + ('........',) * 3
 
