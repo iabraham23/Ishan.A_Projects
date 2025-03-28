@@ -1,4 +1,7 @@
-#Suri and Ishan 
+"""
+Polynomial regression using sckit 
+
+"""
 
 import matplotlib
 matplotlib.use('TkAgg') #for usage on mac
@@ -19,8 +22,6 @@ def generate_coefficients():
     Returns a sequence of five numbers, to be used as coefficients of a polynomial. Each number is chosen uniformly from the
     interval [-0.5, 0.5).
     """
-    # TODO You have to write this
-
     return np.random.uniform(low=-0.5, high=0.5, size=5)
 
 
@@ -34,7 +35,6 @@ def generate_data(m, coefficients):
     where coefficients is (a, b, c, d, e) and the noise for each point is normally distributed with mean 0 and
     standard deviation 1.
     """
-    # TODO You have to write this
 
     X = np.linspace(-5.0,5.0,m)
     a,b,c,d,e = coefficients
@@ -67,7 +67,6 @@ def fit_curve(X, y, degree):
     """
     Returns a trained model that fits a polynomial of the specified degree to the data.
     """
-    # TODO You have to write this
 
     features = PolynomialFeatures(degree=degree, include_bias=False)
     X_poly = features.fit_transform(X) #contains original feature plus feature ^ degree
@@ -95,8 +94,6 @@ def plot_curve(degree, model):
 
     plt.plot(x_vals, y_vals)
     plt.show()
-
-    # TODO You have to write this
 
 
 def mse(X, y, degree, model):
