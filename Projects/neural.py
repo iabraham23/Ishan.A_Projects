@@ -1,5 +1,6 @@
-#Jermisha and Ishan
-
+"""
+Simple Python neural network, just powerful enough to learn XOR 
+"""
 
 import math
 import random
@@ -50,9 +51,6 @@ class OutputNeuron:
 
 
 class HiddenNeuron(OutputNeuron):
-    # TODO You have to write this. It is almost identical to OutputNeuron, but it has a different
-    # update_delta method which doesn't take target as an argument.  You can copy and paste or
-    # use inheritance.
     def __init__(self, previous_layer):
         super().__init__(previous_layer) #inehrits all methods from parent class
 
@@ -78,7 +76,6 @@ class Network:
         :param inputs: Values to use as activations of the input layer.
         :return: The predictions of the neurons in the output layer.
         """
-        # TODO You have to write this
         for input, unit in zip(inputs, self.layers[0]):
             unit.activation = input
         for layer in self.layers[1:]:
@@ -101,7 +98,6 @@ class Network:
         been called, so all neurons have had their activations updated.
         :param targets: The desired activations of the output neurons.
         """
-        # TODO You have to write this
 
         for target, unit in zip(targets, self.layers[-1]):
             unit.update_delta(target)
@@ -113,7 +109,6 @@ class Network:
         """
         Update the weights of all neurons.
         """
-        # TODO You have to write this
         for layer in self.layers[1:]:
             for unit in layer:
                 unit.update_weights()
