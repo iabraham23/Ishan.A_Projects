@@ -11,7 +11,7 @@ RULES
 text_to_morse: translates text to morse code with correct timings
 no_spacing(text_to_morse): gives morse code without spacing, used for display on webpage
 
-morse_to_text: takes in morse code (from this program) and turns it into text! 
+morse_to_text: takes in morse code (with spacing, from this program) and turns it into text! 
 """
 
 def morse_dict():
