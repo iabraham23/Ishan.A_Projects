@@ -1,12 +1,12 @@
 """
 RULES
 
-* a dot lasts for one unit
-* a dash last for three units
+- a dot lasts for one unit
+- a dash last for three units
 
-* the space between dots and dashes that are part of the same letter is one unit
-* the space between different letters is three units
-* the space between different words is seven units
+- the space between dots and dashes that are part of the same letter is one unit
+- the space between different letters is three units
+- the space between different words is seven units
 
 text_to_morse: translates text to morse code with correct timings
 no_spacing(text_to_morse): gives morse code without spacing, used for display on webpage
